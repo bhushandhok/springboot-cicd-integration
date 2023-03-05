@@ -13,17 +13,17 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+    
+permissions:
+  contents: 'read'
+  id-token: 'write'
+  issues: 'write'
 
 jobs:
 
   build:
 
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
 
     steps:
     - uses: actions/checkout@v2
